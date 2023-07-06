@@ -1,0 +1,45 @@
+
+  
+
+  <img src="https://img.wattpad.com/5806e495d208e7b898f821497354acaa37212a25/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f31537033374a75722d386a4436673d3d2d3937373939313838362e31363435363461336237323365303232323236373930343030302e676966?s=fit&w=720&h=720"/>
+
+
+### About Me: 
+I am a young Full-stack developer <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> 
+
+👩‍💻 My Name Mila, 19 y.o 
+
+---
+
+
+### &#x1F49C;Frontend:
+
+  ![](https://img.shields.io/badge/Code-HTML5-informational?style=flat&logo=html5&logoColor=white&color=rgb(98,143,219))
+  ![](https://img.shields.io/badge/Code-CSS3-informational?style=flat&logo=css3&logoColor=white&color=rgb(98,143,219))
+  ![](https://img.shields.io/badge/Code-JavaScript-informational?style=flat&logo=javascript&logoColor=white&color=rgb(98,143,219))
+
+### &#x1F49C;Backend:
+  ![](https://img.shields.io/badge/Database-MySQL-informational?style=flat&logo=mysql&logoColor=white&color=rgb(98,143,219))
+  ![](https://img.shields.io/badge/Code-PHP-informational?style=flat&logo=PHP&logoColor=white&color=rgb(98,143,219))  
+
+### &#x1F49C;Server:
+  ![](https://img.shields.io/badge/Database-XAMPP-informational?style=flat&logo=XAMPP&logoColor=white&color=rgb(98,143,219))
+   
+### &#x1F49C;Frameworks:
+
+  ![](https://img.shields.io/badge/Code-ReactJS-informational?style=flat&logo=react&logoColor=white&color=rgb(98,143,219))
+  ![](https://img.shields.io/badge/Code-SCSS-informational?style=flat&logo=sass&logoColor=white&color=rgb(98,143,219))
+
+### &#x1F49C;Code Editor:
+
+  ![](https://img.shields.io/badge/Editor-VSCode-informational?style=flat&logo=visualstudiocode&logoColor=white&color=rgb(98,143,219))
+
+### &#x1F49C;Design Editors:
+![](https://img.shields.io/badge/Editor-Figma-informational?style=flat&logo=Figma&logoColor=white&color=rgb(98,143,219))
+![](https://img.shields.io/badge/Editor-Adobe_Photoshop-informational?style=flat&logo=AdobePhotoshop&logoColor=white&color=rgb(98,143,219))
+![](https://img.shields.io/badge/Editor-Adobe_Illustrator-informational?style=flat&logo=AdobeIllustrator&logoColor=white&color=rgb(98,143,219))
+
+---
+### :fire: My Stats :
+
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=Deoships&theme=tokyonight&hide_border=true&border_radius=0&card_width=950)](https://git.io/streak-stats)
