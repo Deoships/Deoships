@@ -2,10 +2,10 @@
   
 
 
-### About Me: 
+### 👩‍💻About Me: 
 I am a young Full-stack developer <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> 
 
-👩‍💻 My Name Mila, 19 y.o 
+My Name Mila, 19 y.o 
 
 ---
 
