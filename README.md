@@ -5,7 +5,7 @@
 ### 👩‍💻About Me: 
 I am a young Full-stack developer
 
-My Name Mila, 19 y.o 
+Mila 19 y.o 
 
 ---
 
