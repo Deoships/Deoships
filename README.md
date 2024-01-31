@@ -3,7 +3,7 @@
 
 
 ### 👩‍💻About Me: 
-I am a young Full-stack developer
+junior full-stack developer
 
 Mila 19 y.o 
 
