@@ -24,7 +24,6 @@ Mila 19 y.o
    
 ### &#x1F49C;Frameworks:
 
-  ![](https://img.shields.io/badge/Code-ReactJS-informational?style=flat&logo=react&logoColor=white&color=rgb(98,143,219))
   ![](https://img.shields.io/badge/Code-SCSS-informational?style=flat&logo=sass&logoColor=white&color=rgb(98,143,219))
 
 ### &#x1F49C;Code Editor:
