@@ -21,7 +21,7 @@ Mila 19 y.o
 
 ### &#x1F49C;Server:
   ![](https://img.shields.io/badge/Database-XAMPP-informational?style=flat&logo=XAMPP&logoColor=white&color=rgb(98,143,219))
-   ![](https://img.shields.io/badge/Database-OPENSERSER-informational?style=flat&logo=OPENSERSER&logoColor=white&color=rgb(98,143,219))
+   ![](https://img.shields.io/badge/Database-Open_panel-informational?style=flat&logo=Open_panel&logoColor=white&color=rgb(98,143,219))
    
 ### &#x1F49C;Frameworks:
 
