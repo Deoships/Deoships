@@ -31,7 +31,6 @@ Mila 19 y.o
 
 ### &#x1F49C;Design Editors:
 ![](https://img.shields.io/badge/Editor-Figma-informational?style=flat&logo=Figma&logoColor=white&color=rgb(98,143,219))
-![](https://img.shields.io/badge/Editor-Pixso-informational?style=flat&logo=Pixso&logoColor=white&color=rgb(98,143,219))
 ![](https://img.shields.io/badge/Editor-Adobe_Photoshop-informational?style=flat&logo=AdobePhotoshop&logoColor=white&color=rgb(98,143,219))
 ![](https://img.shields.io/badge/Editor-Adobe_Illustrator-informational?style=flat&logo=AdobeIllustrator&logoColor=white&color=rgb(98,143,219))
 
