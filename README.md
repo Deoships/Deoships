@@ -28,7 +28,7 @@ Mila 20 y.o
 
 ### &#x1F49C;Code Editor:
 
-  ![](https://img.shields.io/badge/Editor-VSCode-informational?style=flat&logo=visualstudio&logoColor=white&color=rgb(98,143,219))
+  ![](https://img.shields.io/badge/Editor-VSCode-informational?style=flat&logo=visualstudiocode&logoColor=white&color=rgb(98,143,219))
 
 ### &#x1F49C;Design Editors:
 ![](https://img.shields.io/badge/Editor-Figma-informational?style=flat&logo=Figma&logoColor=white&color=rgb(98,143,219))
