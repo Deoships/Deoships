@@ -21,6 +21,7 @@ Mila 20 y.o
   ![](https://img.shields.io/badge/Database-PhpMyAdmin-informational?style=flat&logo=phpmyadmin&logoColor=white&color=rgb(98,143,219))
   ![](https://img.shields.io/badge/Code-PHP-informational?style=flat&logo=PHP&logoColor=white&color=rgb(98,143,219))  
   ![](https://img.shields.io/badge/Code-Go-informational?style=flat&logo=Go&logoColor=white&color=rgb(98,143,219))  
+  ![](https://img.shields.io/badge/Database-SQLite-informational?style=flat&logo=sqlite&logoColor=white&color=rgb(98,143,219))
    
 ### &#x1F49C;Frameworks:
 
