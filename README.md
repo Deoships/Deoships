@@ -41,3 +41,7 @@ Mila 20 y.o
 ### :fire: My Stats :
 
 [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=Deoships&theme=tokyonight&hide_border=true&border_radius=0&card_width=950)](https://git.io/streak-stats)
+
+---
+### My contribution activity :
+![GitHub Snake Dark](https://github.com/Deoships/github-snake/blob/output/github-contribution-grid-snake-dark.svg)
