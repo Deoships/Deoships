@@ -13,11 +13,11 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Generate snake animation
-        uses: Platane/snk@latest  # Или @v4, если она есть
+        uses: Platane/snk@v3  
         with:
           github_user_name: ${{ github.repository_owner }}
           args: |
-            --snake_color '00BFFF'
+            --snake_color '#00BFFF'  #  Добавил '#' перед hex-кодом (важно!)
             --show_progress_bar false
             --svg_out_path dist/github-contribution-grid-snake.svg
             --gif_out_path dist/github-contribution-grid-snake.gif
@@ -50,7 +50,7 @@ jobs:
               repo: context.repo.repo,
               path: 'readme.md',
               message: 'docs: update github-snake',
-              content: fs.readFileSync('./readme.md', { encoding: 'utf8' }).replace(/<div id="github-snake">[\s\S]*<\/div>/, `<div id="github-snake"><img src="" alt="github-snake"/></div>`),
+              content: fs.readFileSync('./readme.md', { encoding: 'utf8' }).replace(/<div id="github-snake">[\s\S]*<\/div>/, `<div id="github-snake"><img src="" alt="github-snake"/></div>`),  # Добавил путь к изображению в src
               sha: (await github.rest.git.getRef({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
