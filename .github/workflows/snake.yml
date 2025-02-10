@@ -13,13 +13,14 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Generate snake animation
-        uses: Platane/snk@v3
+        uses: Platane/snk@latest  # Или @v4, если она есть
         with:
           github_user_name: ${{ github.repository_owner }}
-          svg_out_path: dist/github-contribution-grid-snake.svg
-          gif_out_path: dist/github-contribution-grid-snake.gif
-          snake_color: '00BFFF'  # Голубой цвет
-          show_progress_bar: false # Убираем прогресс-бар
+          args: |
+            --snake_color '00BFFF'
+            --show_progress_bar false
+            --svg_out_path dist/github-contribution-grid-snake.svg
+            --gif_out_path dist/github-contribution-grid-snake.gif
 
       - name: Commit & Push changes
         uses: actions/github-script@v6
