@@ -1,39 +1,66 @@
-name: snake-github-profile
+name: Generate Snake
 
 on:
   schedule:
     - cron: "0 */6 * * *"
   workflow_dispatch:
-    inputs:
-      logLevel:
-        description: 'Log level'
-        required: false
-        default: 'info'
-        type: choice
-        options:
-          - info
-          - debug
 
 jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
+      - name: Checkout
         uses: actions/checkout@v3
-      - name: generate snake animation
+
+      - name: Generate snake animation
         uses: Platane/snk@v3
         with:
-          github_user_name: Deoships
-          gif_out_path: dist/github-contribution-grid-snake.gif
+          github_user_name: ${{ github.repository_owner }}
           svg_out_path: dist/github-contribution-grid-snake.svg
-          color_head: '#70a5fd'
-          color_snake: '#70a5fd'
-          color_dots: '#70a5fd,#426696,#264061,#192b48'
-          show_progress_bar: false
-      - name: push to github
-        uses: crazy-max/ghaction-github-pages@v3
+          gif_out_path: dist/github-contribution-grid-snake.gif
+          snake_color: '00BFFF'  # Голубой цвет
+          show_progress_bar: false # Убираем прогресс-бар
+
+      - name: Commit & Push changes
+        uses: actions/github-script@v6
         with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs')
+            const dist_dir = './dist'
+            if (!fs.existsSync(dist_dir)) {
+              fs.mkdirSync(dist_dir)
+            }
+            console.log("Making changes...");
+            await github.rest.git.createBlob({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              content: fs.readFileSync('./dist/github-contribution-grid-snake.svg', { encoding: 'utf8' }),
+              encoding: 'utf8'
+            });
+            await github.rest.git.createBlob({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              content: fs.readFileSync('./dist/github-contribution-grid-snake.gif', { encoding: 'base64' }),
+              encoding: 'base64'
+            });
+            console.log("Pushing new commits...");
+            await github.rest.repos.createOrUpdateFileContents({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              path: 'readme.md',
+              message: 'docs: update github-snake',
+              content: fs.readFileSync('./readme.md', { encoding: 'utf8' }).replace(/<div id="github-snake">[\s\S]*<\/div>/, `<div id="github-snake"><img src="" alt="github-snake"/></div>`),
+              sha: (await github.rest.git.getRef({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                ref: 'heads/main'
+              })).data.object.sha,
+              committer: {
+                name: 'github-actions[bot]',
+                email: 'github-actions[bot]@users.noreply.github.com'
+              },
+              author: {
+                name: 'github-actions[bot]',
+                email: 'github-actions[bot]@users.noreply.github.com'
+              }
+            });
