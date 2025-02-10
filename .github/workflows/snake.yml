@@ -1,17 +1,12 @@
-name: generate animation
+name: Generate Snake
 
 on:
-  # run automatically every 24 hours
   schedule:
     - cron: "0 */24 * * *"
-  
-  # allows to manually run the job at any time
   workflow_dispatch:
-  
-  # run on every push on the master branch
   push:
     branches:
-    - main
+      - main
 
 jobs:
   generate:
@@ -19,17 +14,19 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     timeout-minutes: 5
-    
+
     steps:
-      # generates a snake game from a github user (<github_user_name>) contributions graph, output a svg animation at <svg_out_path>
-      - name: generate github-contribution-grid-snake.svg
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Generate github-contribution-grid-snake.svg
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-          
+
       - name: Update README with SVG
         uses: actions/github-script@v6
         with:
@@ -47,17 +44,19 @@ jobs:
             let readmeContent = fs.readFileSync(readmePath, { encoding: 'utf8' });
 
             // Replace the snake section in README
-            readmeContent = readmeContent.replace(
-              /(<!-- github-snake-start -->[\s\S]*<!-- github-snake-end -->)/m,
-              `<!-- github-snake-start -->\n<p align="center">\n${svgContent}\n</p>\n<!-- github-snake-end -->`
-            );
+            const startComment = '<!-- github-snake-start -->';
+            const endComment = '<!-- github-snake-end -->';
+            const regex = new RegExp(`${startComment}[\\s\\S]*${endComment}`);
+
+            const replacement = `${startComment}\n<p align="center">\n${svgContent}\n</p>\n${endComment}`;
+            readmeContent = readmeContent.replace(regex, replacement);
 
             fs.writeFileSync(readmePath, readmeContent, { encoding: 'utf8' });
 
             await github.rest.repos.createOrUpdateFileContents({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              path: 'README.md', # указываем относительный путь для коммита
+              path: 'README.md',
               message: 'Update README with new snake SVG',
               content: readmeContent,
               sha: (await github.rest.git.getRef({
