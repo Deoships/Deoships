@@ -1,23 +1,27 @@
 name: generate animation
 
 on:
+  # run automatically every 24 hours
   schedule:
-    - cron: "0 */24 * * *" 
-    
+    - cron: "0 */24 * * *"
+  
+  # allows to manually run the job at any time
   workflow_dispatch:
   
+  # run on every push on the master branch
   push:
     branches:
     - main
 
 jobs:
   generate:
-    permissions: 
+    permissions:
       contents: write
     runs-on: ubuntu-latest
     timeout-minutes: 5
     
     steps:
+      # generates a snake game from a github user (<github_user_name>) contributions graph, output a svg animation at <svg_out_path>
       - name: generate github-contribution-grid-snake.svg
         uses: Platane/snk/svg-only@v3
         with:
@@ -34,12 +38,12 @@ jobs:
             const svgPath = './dist/github-contribution-grid-snake.svg';
             let svgContent = fs.readFileSync(svgPath, { encoding: 'utf8' });
 
-            //  Заменяем цвет змейки и убираем прогресс-бар.
-            //  Это нужно делать, потому что параметры URL не работают.
-            svgContent = svgContent.replace(/#777777/g, '#00BFFF'); // Заменяем серый на голубой
-            svgContent = svgContent.replace(/<rect .*?class="progress".*?\/>/g, ''); // Удаляем прогресс-бар
+            // Заменяем цвет змейки и убираем прогресс-бар.
+            svgContent = svgContent.replace(/#777777/g, '#00BFFF');
+            svgContent = svgContent.replace(/<rect .*?class="progress".*?\/>/g, '');
 
-            const readmePath = 'Deoships/README.md';
+            // Определяем абсолютный путь к README.md
+            const readmePath = process.env.GITHUB_WORKSPACE + '/README.md';
             let readmeContent = fs.readFileSync(readmePath, { encoding: 'utf8' });
 
             // Replace the snake section in README
@@ -53,7 +57,7 @@ jobs:
             await github.rest.repos.createOrUpdateFileContents({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              path: readmePath,
+              path: 'README.md', # указываем относительный путь для коммита
               message: 'Update README with new snake SVG',
               content: readmeContent,
               sha: (await github.rest.git.getRef({
@@ -70,10 +74,3 @@ jobs:
                 email: 'actions@github.com'
               }
             });
-      - name: push github-contribution-grid-snake.svg to the output branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
-        with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
