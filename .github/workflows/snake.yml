@@ -39,7 +39,7 @@ jobs:
             svgContent = svgContent.replace(/#777777/g, '#00BFFF'); // Заменяем серый на голубой
             svgContent = svgContent.replace(/<rect .*?class="progress".*?\/>/g, ''); // Удаляем прогресс-бар
 
-            const readmePath = 'README.md';
+            const readmePath = 'Deoships/README.md';
             let readmeContent = fs.readFileSync(readmePath, { encoding: 'utf8' });
 
             // Replace the snake section in README
