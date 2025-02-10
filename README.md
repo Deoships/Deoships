@@ -44,4 +44,4 @@ Mila 20 y.o
 
 ---
 ### My contribution activity :
-![GitHub Snake](https://github.com/Deoships/Deoships/blob/main/dist/github-contribution-grid-snake.gif)
+![GitHub Snake](https://github.com/Deoships/Deoships/blob/main/dist/github-contribution-grid-snake-dark.svg?palette=github-dark)
