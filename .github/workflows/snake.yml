@@ -1,67 +1,44 @@
-name: Generate Snake
+name: generate animation
 
 on:
+  # run automatically every 24 hours
   schedule:
-    - cron: "0 */6 * * *"
+    - cron: "0 */24 * * *" 
+  
+  # allows to manually run the job at any time
   workflow_dispatch:
+  
+  # run on every push on the master branch
+  push:
+    branches:
+    - master
+    
+  
 
 jobs:
   generate:
+    permissions: 
+      contents: write
     runs-on: ubuntu-latest
+    timeout-minutes: 5
+    
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Generate snake animation
-        uses: Platane/snk@v3  
+      # generates a snake game from a github user (<github_user_name>) contributions graph, output a svg animation at <svg_out_path>
+      - name: generate github-contribution-grid-snake.svg
+        uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
-          args: |
-            --snake_color '#00BFFF'  #  Добавил '#' перед hex-кодом (важно!)
-            --show_progress_bar false
-            --svg_out_path dist/github-contribution-grid-snake.svg
-            --gif_out_path dist/github-contribution-grid-snake.gif
-
-      - name: Commit & Push changes
-        uses: actions/github-script@v6
+          outputs: |
+            dist/github-contribution-grid-snake.svg?color=00BFFF&show_progress=false
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color=00BFFF&show_progress=false
+          
+          
+      # push the content of <build_dir> to a branch
+      # the content will be available at https://raw.githubusercontent.com/<github_user>/<repository>/<target_branch>/<file> , or as github page
+      - name: push github-contribution-grid-snake.svg to the output branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
-          script: |
-            const fs = require('fs')
-            const dist_dir = './dist'
-            if (!fs.existsSync(dist_dir)) {
-              fs.mkdirSync(dist_dir)
-            }
-            console.log("Making changes...");
-            await github.rest.git.createBlob({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              content: fs.readFileSync('./dist/github-contribution-grid-snake.svg', { encoding: 'utf8' }),
-              encoding: 'utf8'
-            });
-            await github.rest.git.createBlob({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              content: fs.readFileSync('./dist/github-contribution-grid-snake.gif', { encoding: 'base64' }),
-              encoding: 'base64'
-            });
-            console.log("Pushing new commits...");
-            await github.rest.repos.createOrUpdateFileContents({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              path: 'readme.md',
-              message: 'docs: update github-snake',
-              content: fs.readFileSync('./readme.md', { encoding: 'utf8' }).replace(/<div id="github-snake">[\s\S]*<\/div>/, `<div id="github-snake"><img src="" alt="github-snake"/></div>`),  # Добавил путь к изображению в src
-              sha: (await github.rest.git.getRef({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                ref: 'heads/main'
-              })).data.object.sha,
-              committer: {
-                name: 'github-actions[bot]',
-                email: 'github-actions[bot]@users.noreply.github.com'
-              },
-              author: {
-                name: 'github-actions[bot]',
-                email: 'github-actions[bot]@users.noreply.github.com'
-              }
-            });
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
