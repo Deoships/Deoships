@@ -1,47 +1,34 @@
-name: Generate snake animation
+name: generate animation
 
 on:
   schedule:
-    - cron: "0 */24 * * *"
+    - cron: "0 */24 * * *" 
 
   workflow_dispatch:
-
+  
   push:
     branches:
-      - main  
-
+    - master
+    
+  
 
 jobs:
   generate:
-    permissions:
+    permissions: 
       contents: write
     runs-on: ubuntu-latest
     timeout-minutes: 5
-
+    
     steps:
-      - uses: actions/checkout@v3
-        with:
-          repository: Deoships/snk
-          ref: main 
-          path: snk
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20  
-
-      - name: Install dependencies and build snk
-        run: |
-          cd snk
-          npm install
-          npm run build  # Используем команду build из package.json
-
       - name: generate github-contribution-grid-snake.svg
-        run: |
-          cd snk
-          npm run snake -- --github_user_name ${{ github.repository_owner }} --output dist/github-contribution-grid-snake.svg dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-          #node ./src/snake.ts --github_user_name ${{ github.repository_owner }} --output dist/github-contribution-grid-snake.svg dist/github-contribution-grid-snake-dark.svg?palette=github-dark # direct call will not work because it requires ts-node
-
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+          
+          
       - name: push github-contribution-grid-snake.svg to the output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
