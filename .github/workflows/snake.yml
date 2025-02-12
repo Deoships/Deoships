@@ -1,75 +1,53 @@
-name: Generate Snake
+name: Generate snake animation
 
 on:
   schedule:
-    - cron: "0 */24 * * *"
+    - cron: "0 */24 * * *" 
+
   workflow_dispatch:
+  
   push:
     branches:
-      - main
+    - main  
+    
+  
 
 jobs:
   generate:
-    permissions:
+    permissions: 
       contents: write
     runs-on: ubuntu-latest
     timeout-minutes: 5
-
+    
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Generate github-contribution-grid-snake.svg
-        uses: Platane/snk/svg-only@v3
+      - uses: actions/checkout@v3
         with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-
-      - name: Update README with SVG
-        uses: actions/github-script@v6
+          repository: Deoships/snk
+          ref: main  
+          path: snk
+          
+      # Set up Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          script: |
-            const fs = require('fs');
-            const svgPath = './dist/github-contribution-grid-snake.svg';
-            let svgContent = fs.readFileSync(svgPath, { encoding: 'utf8' });
+          node-version: 16  
 
-            // Заменяем цвет змейки и убираем прогресс-бар.
-            svgContent = svgContent.replace(/#777777/g, '#00BFFF');
-            svgContent = svgContent.replace(/<rect .*?class="progress".*?\/>/g, '');
+      - name: Install dependencies and build snk
+        run: |
+          cd snk
+          npm install
+          npm run build  # Or yarn build, if your fork uses yarn. Check your package.json
 
-            // Определяем абсолютный путь к README.md
-            const readmePath = process.env.GITHUB_WORKSPACE + '/README.md';
-            let readmeContent = fs.readFileSync(readmePath, { encoding: 'utf8' });
+      - name: generate github-contribution-grid-snake.svg
+        run: |
+          cd snk
+          node ./dist/cli.js --github_user_name ${{ github.repository_owner }} --output dist/github-contribution-grid-snake.svg dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+          #  npm run snake -- --github_user_name ${{ github.repository_owner }} # Original line, might still work but using direct node call for more control
 
-            // Replace the snake section in README
-            const startComment = '<!-- github-snake-start -->';
-            const endComment = '<!-- github-snake-end -->';
-            const regex = new RegExp(`${startComment}[\\s\\S]*${endComment}`);
-
-            const replacement = `${startComment}\n<p align="center">\n${svgContent}\n</p>\n${endComment}`;
-            readmeContent = readmeContent.replace(regex, replacement);
-
-            fs.writeFileSync(readmePath, readmeContent, { encoding: 'utf8' });
-
-            await github.rest.repos.createOrUpdateFileContents({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              path: 'README.md',
-              message: 'Update README with new snake SVG',
-              content: readmeContent,
-              sha: (await github.rest.git.getRef({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                ref: 'heads/main'
-              })).data.object.sha,
-              committer: {
-                name: 'GitHub Actions Bot',
-                email: 'actions@github.com'
-              },
-              author: {
-                name: 'GitHub Actions Bot',
-                email: 'actions@github.com'
-              }
-            });
+      - name: push github-contribution-grid-snake.svg to the output branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
