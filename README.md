@@ -20,7 +20,6 @@ Full-satack
 ### 💙Design Editors:  
 [![My Skills](https://skillicons.dev/icons?i=figma,ai,ps)](https://skillicons.dev)
 
-<img src="img/logo_light.png" align=center>
 
 ### :fire: My Stats :
 
