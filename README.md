@@ -4,6 +4,8 @@ Mila 20 y.o
 
 ---
 
+<img height="310" src="img/girl.png" align=right>
+
 ### 💙Frontend:  
 [![My Skills](https://skillicons.dev/icons?i=js,html,css,)](https://skillicons.dev)
 
