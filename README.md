@@ -5,28 +5,19 @@ Mila 20 y.o
 ---
 
 ### 💙Frontend:  
- [ ![HTML5](https://skillicons.dev/icons/html5.svg)  ](https://skillicons.dev/icons?i=html5)
-  ![CSS3](https://skillicons.dev/icons/css3.svg)  
-  ![JavaScript](https://skillicons.dev/icons/javascript.svg)  
+[![My Skills](https://skillicons.dev/icons?i=js,html,css,)](https://skillicons.dev)
 
 ### 💙Backend:  
-  ![MySQL](https://skillicons.dev/icons/mysql.svg)  
-  ![SQLite](https://skillicons.dev/icons/sqlite.svg)  
-  ![Apache](https://skillicons.dev/icons/apache.svg)  
-  ![PhpMyAdmin](https://skillicons.dev/icons/phpmyadmin.svg)  
-  ![PHP](https://skillicons.dev/icons/php.svg)  
-  ![Go](https://skillicons.dev/icons/go.svg)  
+[![My Skills](https://skillicons.dev/icons?i=mysql,sqlite,php,go)](https://skillicons.dev)
 
 ### 💙Frameworks:  
-  ![SCSS](https://skillicons.dev/icons/sass.svg)  
+[![My Skills](https://skillicons.dev/icons?i=scss)](https://skillicons.dev)
 
 ### 💙Code Editor:  
-  ![VSCode](https://skillicons.dev/icons/vscode.svg)  
+[![My Skills](https://skillicons.dev/icons?i=vscode)](https://skillicons.dev)
 
 ### 💙Design Editors:  
-  ![Figma](https://skillicons.dev/icons/figma.svg)  
-  ![Photoshop](https://skillicons.dev/icons/photoshop.svg)  
-  ![Illustrator](https://skillicons.dev/icons/illustrator.svg)  
+[![My Skills](https://skillicons.dev/icons?i=figma,ai,ps)](https://skillicons.dev)
 
 ---
 ### :fire: My Stats :
