@@ -1,39 +1,32 @@
-
-### 👩‍💻About Me: 
-full-stack developer
-
-Mila 20 y.o 
+### 👩‍💻About Me:  
+Full-stack developer  
+Mila 20 y.o  
 
 ---
 
-### &#x1F49C;Frontend:
+### 💙Frontend:  
+  ![HTML5](https://skillicons.dev/icons/html5.svg)  
+  ![CSS3](https://skillicons.dev/icons/css3.svg)  
+  ![JavaScript](https://skillicons.dev/icons/javascript.svg)  
 
-  ![](https://img.shields.io/badge/Code-HTML5-informational?style=flat&logo=html5&logoColor=white&color=rgb(98,143,219))
-  ![](https://img.shields.io/badge/Code-CSS3-informational?style=flat&logo=css3&logoColor=white&color=rgb(98,143,219))
-  ![](https://img.shields.io/badge/Code-JavaScript-informational?style=flat&logo=javascript&logoColor=white&color=rgb(98,143,219))
+### 💙Backend:  
+  ![MySQL](https://skillicons.dev/icons/mysql.svg)  
+  ![SQLite](https://skillicons.dev/icons/sqlite.svg)  
+  ![Apache](https://skillicons.dev/icons/apache.svg)  
+  ![PhpMyAdmin](https://skillicons.dev/icons/phpmyadmin.svg)  
+  ![PHP](https://skillicons.dev/icons/php.svg)  
+  ![Go](https://skillicons.dev/icons/go.svg)  
 
-### &#x1F49C;Backend:
-  ![](https://img.shields.io/badge/Database-MySQL-informational?style=flat&logo=mysql&logoColor=white&color=rgb(98,143,219))
-  ![](https://img.shields.io/badge/Database-SQLite-informational?style=flat&logo=sqlite&logoColor=white&color=rgb(98,143,219))
-  ![](https://img.shields.io/badge/Database-Apache-informational?style=flat&logo=apache&logoColor=white&color=rgb(98,143,219))
-  ![](https://img.shields.io/badge/Database-PhpMyAdmin-informational?style=flat&logo=phpmyadmin&logoColor=white&color=rgb(98,143,219))
-  ![](https://img.shields.io/badge/Code-PHP-informational?style=flat&logo=PHP&logoColor=white&color=rgb(98,143,219))  
-  ![](https://img.shields.io/badge/Code-Go-informational?style=flat&logo=Go&logoColor=white&color=rgb(98,143,219))  
+### 💙Frameworks:  
+  ![SCSS](https://skillicons.dev/icons/sass.svg)  
 
+### 💙Code Editor:  
+  ![VSCode](https://skillicons.dev/icons/vscode.svg)  
 
-### &#x1F49C;Frameworks:
-
-  ![](https://img.shields.io/badge/Code-SCSS-informational?style=flat&logo=sass&logoColor=white&color=rgb(98,143,219))
-
-### &#x1F49C;Code Editor:
-
-  ![](https://img.shields.io/badge/Editor-VSCode-informational?style=flat&logo=visualstudiocode&logoColor=white&color=rgb(98,143,219))
-
-### &#x1F49C;Design Editors:
-  ![](https://img.shields.io/badge/Editor-Figma-informational?style=flat&logo=Figma&logoColor=white&color=rgb(98,143,219))
-  ![](https://img.shields.io/badge/Editor-Adobe_Photoshop-informational?style=flat&logo=AdobePhotoshop&logoColor=white&color=rgb(98,143,219))
-  ![](https://img.shields.io/badge/Editor-Adobe_Illustrator-informational?style=flat&logo=AdobeIllustrator&logoColor=white&color=rgb(98,143,219))
-
+### 💙Design Editors:  
+  ![Figma](https://skillicons.dev/icons/figma.svg)  
+  ![Photoshop](https://skillicons.dev/icons/photoshop.svg)  
+  ![Illustrator](https://skillicons.dev/icons/illustrator.svg)  
 
 ---
 ### :fire: My Stats :
