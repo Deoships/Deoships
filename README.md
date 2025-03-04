@@ -1,5 +1,6 @@
-<img src="img/logo_light.png" align=center>
-                                                                          
+Mila
+20 yo
+Full-satack                                                                          
 ---
 
 <img height="510" src="img/girl.png" align=right>
@@ -19,7 +20,8 @@
 ### 💙Design Editors:  
 [![My Skills](https://skillicons.dev/icons?i=figma,ai,ps)](https://skillicons.dev)
 
----
+<img src="img/logo_light.png" align=center>
+
 ### :fire: My Stats :
 
 [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=Deoships&theme=tokyonight&hide_border=true&border_radius=0&card_width=950)](https://git.io/streak-stats)
