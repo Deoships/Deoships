@@ -10,9 +10,7 @@ Mila 20 y.o
 ---
 Tool and Tech I use
 ---
-[![My Skills](https://skillicons.dev/icons?i=js,html,css,scss)](https://skillicons.dev)
-[![My Skills](https://skillicons.dev/icons?i=mysql,sqlite,php,go)](https://skillicons.dev)
-[![My Skills](https://skillicons.dev/icons?i=vscode,figma,ai,ps)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=js,html,css,scss,mysql,sqlite,php,go,vscode,figma,ai,ps,arduino&perline=4)](https://skillicons.dev)
 
 ### &#x1F49C;Frontend:
 
