@@ -1,11 +1,10 @@
-<img height="310" src="img/girl.png" align=right>
+<img height="333" src="img/girl.png" align=right>
 
 ### 👩‍💻 About Me :
 Mila
 20 y.o
 full-stack
                                                                       
----
 
 ### ⚙️ My uses tools and tech
 
