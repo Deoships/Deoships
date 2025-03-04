@@ -6,12 +6,11 @@
 full-stack developer
 
 Mila 20 y.o 
----
 # Tool and Tech I Use
 
 <div align="center">
 
-<table>
+<table cellspacing="15">
   <tr>
     <th>Frontend</th>
     <th>Backend</th>
