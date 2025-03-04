@@ -5,7 +5,7 @@ Mila 20 y.o
 ---
 
 ### 💙Frontend:  
-  ![HTML5](https://skillicons.dev/icons/html5.svg)  
+ [ ![HTML5](https://skillicons.dev/icons/html5.svg)  ](https://skillicons.dev/icons?i=html5)
   ![CSS3](https://skillicons.dev/icons/css3.svg)  
   ![JavaScript](https://skillicons.dev/icons/javascript.svg)  
 
