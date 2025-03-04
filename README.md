@@ -1,6 +1,8 @@
+### 👩‍💻 About Me :
 Mila
-20 yo
-Full-satack                                                                          
+20 y.o
+full-stack
+                                                                      
 ---
 
 <img height="310" src="img/girl.png" align=right>
