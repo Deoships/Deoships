@@ -6,24 +6,27 @@
 full-stack developer
 
 Mila 20 y.o 
-# Tool and Tech I Use
+#Tool and Tech I Use
 
 <div align="center">
 
-<table style="border-collapse: collapse; width: 100%;">
-  <tr>
-    <th style="border: none;">Frontend</th>
-    <th style="border: none;">Backend</th>
-    <th style="border: none;">Tools</th>
-  </tr>
-  <tr>
-    <td style="border: none; padding-right: 20px;"><img src="https://skillicons.dev/icons?i=html,css,scss,js&perline=4"></td>
-    <td style="border: none; padding-right: 20px;"><img src="https://skillicons.dev/icons?i=php,mysql,sqlite,go&perline=4"></td>
-    <td style="border: none;"><img src="https://skillicons.dev/icons?i=vscode,figma,ai,ps&perline=4"></td>
-  </tr>
-</table>
+<div style="display: flex; justify-content: space-around; width: 100%;">
+  <div style="text-align: center; flex: 1;">
+    <h3>Frontend</h3>
+    <img src="https://skillicons.dev/icons?i=html,css,scss,js&perline=4">
+  </div>
+  <div style="text-align: center; flex: 1;">
+    <h3>Backend</h3>
+    <img src="https://skillicons.dev/icons?i=php,mysql,sqlite,go&perline=4">
+  </div>
+  <div style="text-align: center; flex: 1;">
+    <h3>Tools</h3>
+    <img src="https://skillicons.dev/icons?i=vscode,figma,ai,ps&perline=4">
+  </div>
+</div>
 
 </div>
+
 
 
 ---
