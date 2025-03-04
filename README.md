@@ -3,8 +3,6 @@ Mila
 Full-satack                                                                          
 ---
 
-<img height="510" src="img/girl.png" align=right>
-
 ### 💙Frontend:  
 [![My Skills](https://skillicons.dev/icons?i=js,html,css,)](https://skillicons.dev)
 
@@ -13,6 +11,8 @@ Full-satack
 
 ### 💙Frameworks:  
 [![My Skills](https://skillicons.dev/icons?i=scss)](https://skillicons.dev)
+
+<img height="510" src="img/girl.png" align=right>
 
 ### 💙Code Editor:  
 [![My Skills](https://skillicons.dev/icons?i=vscode)](https://skillicons.dev)
