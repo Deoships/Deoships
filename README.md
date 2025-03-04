@@ -6,7 +6,7 @@
 full-stack developer
 
 Mila 20 y.o 
-#Tool and Tech I Use
+# Tool and Tech I Use
 
 <div align="center">
 
