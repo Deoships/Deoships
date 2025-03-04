@@ -6,7 +6,7 @@ Mila
 full-stack
                                                                       
 
-### ⚙️ My uses tools and tech:
+### ⚙️ My uses tools and tech :
 
 [![My Skills](https://skillicons.dev/icons?i=js,html,css,scss,bash,mysql,sqlite,php,go,githubactions,vscode,figma,ai,ps,git&perline=5)](https://skillicons.dev)
 
