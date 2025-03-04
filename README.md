@@ -9,7 +9,7 @@ full-stack
 
 ### ⚙️ My uses tools and tech
 
-[![My Skills](https://skillicons.dev/icons?i=js,html,css,scss,mysql,bash,sqlite,php,go,githubactions,vscode,figma,ai,ps,git&perline=4)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=js,html,css,scss,mysql,bash,sqlite,php,go,githubactions,vscode,figma,ai,ps,git&perline=5)](https://skillicons.dev)
 
 ### ✨ My Stats :
 
