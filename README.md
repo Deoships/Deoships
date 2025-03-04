@@ -8,17 +8,21 @@ full-stack developer
 Mila 20 y.o 
 ---
 # Tool and Tech I Use
----
+
 <div align="center">
 
-## Frontend  
-[![My Skills](https://skillicons.dev/icons?i=html,css,scss,js&perline=4)](https://skillicons.dev)
-
-## Backend  
-[![My Skills](https://skillicons.dev/icons?i=php,mysql,sqlite,go&perline=4)](https://skillicons.dev)
-
-## Tools  
-[![My Skills](https://skillicons.dev/icons?i=vscode,figma,ai,ps&perline=4)](https://skillicons.dev)
+<table>
+  <tr>
+    <th>Frontend</th>
+    <th>Backend</th>
+    <th>Tools</th>
+  </tr>
+  <tr>
+    <td><img src="https://skillicons.dev/icons?i=html,css,scss,js&perline=4"></td>
+    <td><img src="https://skillicons.dev/icons?i=php,mysql,sqlite,go&perline=4"></td>
+    <td><img src="https://skillicons.dev/icons?i=vscode,figma,ai,ps&perline=4"></td>
+  </tr>
+</table>
 
 </div>
 
