@@ -3,7 +3,7 @@ Mila
 Full-satack                                                                          
 ---
 
-<img height="555" src="img/girl.png" align=right>
+<img height="310" src="img/girl.png" align=right>
 
 ### ⚙️ My uses tools and tech
 
