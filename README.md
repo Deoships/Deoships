@@ -15,11 +15,11 @@ Mila 20 y.o
     <h3>Frontend</h3>
     <img src="https://skillicons.dev/icons?i=html,css,scss,js&perline=4">
   </div>
-  <div style="text-align: center; flex: 1;">
+  <div style="text-align: center; flex: 2;">
     <h3>Backend</h3>
     <img src="https://skillicons.dev/icons?i=php,mysql,sqlite,go&perline=4">
   </div>
-  <div style="text-align: center; flex: 1;">
+  <div style="text-align: center; flex: 3;">
     <h3>Tools</h3>
     <img src="https://skillicons.dev/icons?i=vscode,figma,ai,ps&perline=4">
   </div>
